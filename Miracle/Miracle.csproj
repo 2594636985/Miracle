@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4963EFC9-BBFC-43F8-8B59-4F370B6051C3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Miracle</RootNamespace>
+    <AssemblyName>Miracle</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppSession.cs" />
+    <Compile Include="Injection\Activator\IActivator.cs" />
+    <Compile Include="Injection\Activator\InstanceActivator.cs" />
+    <Compile Include="Injection\Activator\ReflectionActivator.cs" />
+    <Compile Include="Injection\ConstructorInjector.cs" />
+    <Compile Include="Injection\ContainerBuilder.cs" />
+    <Compile Include="Injection\ContainerImpl.cs" />
+    <Compile Include="Injection\IContainer.cs" />
+    <Compile Include="Injection\Identity.cs" />
+    <Compile Include="Injection\IInjector.cs" />
+    <Compile Include="Injection\InjectAttribute.cs" />
+    <Compile Include="Injection\InjectionException.cs" />
+    <Compile Include="Injection\InjectionScope.cs" />
+    <Compile Include="Injection\InjectionScopeAttribute.cs" />
+    <Compile Include="Injection\InjectorStorage.cs" />
+    <Compile Include="Injection\InternalFactory.cs" />
+    <Compile Include="Injection\InternalFactoryBuilder.cs" />
+    <Compile Include="Injection\Lifecycle\ILifecycle.cs" />
+    <Compile Include="Injection\Lifecycle\SingletonLifecycle.cs" />
+    <Compile Include="Injection\Lifecycle\TransientLifecycle.cs" />
+    <Compile Include="Injection\ParameterInjector.cs" />
+    <Compile Include="Injection\PropertyInjector.cs" />
+    <Compile Include="MiracleException.cs" />
+    <Compile Include="MiracleExtension.cs" />
+    <Compile Include="MiracleExtension.Reflection.cs" />
+    <Compile Include="MiracleExtension.String.cs" />
+    <Compile Include="Modularization\Controller\ControllerBase.cs" />
+    <Compile Include="Modularization\Controller\IController.cs" />
+    <Compile Include="Modularization\Data\DbExtension.cs" />
+    <Compile Include="Modularization\Data\DbContext.cs" />
+    <Compile Include="Modularization\DisplayMode.cs" />
+    <Compile Include="Modularization\IDataMigration.cs" />
+    <Compile Include="Modularization\IDependency.cs" />
+    <Compile Include="Modularization\INavigation.cs" />
+    <Compile Include="Modularization\IModule.cs" />
+    <Compile Include="Modularization\IModuleFramework.cs" />
+    <Compile Include="Modularization\IViewPage.cs" />
+    <Compile Include="Modularization\IViewPageBox.cs" />
+    <Compile Include="Modularization\IViewPageLoader.cs" />
+    <Compile Include="Modularization\IWindowShell.cs" />
+    <Compile Include="Modularization\Link.cs" />
+    <Compile Include="Modularization\ModuleType.cs" />
+    <Compile Include="Modularization\Security\IAuthentication.cs" />
+    <Compile Include="Modularization\Security\IPermission.cs" />
+    <Compile Include="Modularization\Security\IModuleSecurity.cs" />
+    <Compile Include="Modularization\Security\ModuleSecurityBase.cs" />
+    <Compile Include="Modularization\Service\IService.cs" />
+    <Compile Include="Modularization\Service\ServiceBase.cs" />
+    <Compile Include="Modularization\Session.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Miracle.AomiToDB\Miracle.AomiToDB.csproj">
+      <Project>{7b639f41-174e-4229-bb58-c35280c22f1d}</Project>
+      <Name>Miracle.AomiToDB</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Modularization\Mapping\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

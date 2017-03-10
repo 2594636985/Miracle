@@ -1,0 +1,14 @@
+D:\Developer\Net\workplace\Miracle\Miracle\bin\Debug\Miracle.dll
+D:\Developer\Net\workplace\Miracle\Miracle\bin\Debug\Miracle.pdb
+D:\Developer\Net\workplace\Miracle\Miracle\bin\Debug\Miracle.Modularization.dll
+D:\Developer\Net\workplace\Miracle\Miracle\bin\Debug\Miracle.Modularization.pdb
+D:\Developer\Net\workplace\Miracle\Miracle\obj\Debug\Miracle.dll
+D:\Developer\Net\workplace\Miracle\Miracle\obj\Debug\Miracle.pdb
+D:\Job\Dev\workplace\Miracle\Miracle\bin\Debug\SqlQuery\ReservedWords.txt
+D:\Job\Dev\workplace\Miracle\Miracle\bin\Debug\Miracle.dll
+D:\Job\Dev\workplace\Miracle\Miracle\bin\Debug\Miracle.pdb
+D:\Job\Dev\workplace\Miracle\Miracle\bin\Debug\Miracle.AomiToDB.dll
+D:\Job\Dev\workplace\Miracle\Miracle\bin\Debug\Miracle.AomiToDB.pdb
+D:\Job\Dev\workplace\Miracle\Miracle\obj\Debug\Miracle.csprojResolveAssemblyReference.cache
+D:\Job\Dev\workplace\Miracle\Miracle\obj\Debug\Miracle.dll
+D:\Job\Dev\workplace\Miracle\Miracle\obj\Debug\Miracle.pdb
