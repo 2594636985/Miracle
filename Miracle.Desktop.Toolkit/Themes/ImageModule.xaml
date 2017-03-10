@@ -1,0 +1,46 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:mdtw="clr-namespace:Miracle.Desktop.Toolkit.Windows"
+                    xmlns:mdtwc="clr-namespace:Miracle.Desktop.Toolkit.Windows.Controls"
+                    xmlns:converters="clr-namespace:Miracle.Desktop.Toolkit.Windows.Converters"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <converters:ImageModuleLocationConverter x:Key="ImageModuleLocationConverter"></converters:ImageModuleLocationConverter>
+
+    <Style TargetType="mdtwc:ImageModule">
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="SnapsToDevicePixels" Value="true" />
+        <Setter Property="MinHeight" Value="16" />
+        <Setter Property="MinWidth" Value="16" />
+        <Setter Property="Stretch" Value="Fill" />
+        <Setter Property="StretchDirection" Value="Both" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="mdtwc:ImageModule">
+                    <Border x:Name="Base" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
+                        <Image 
+                            x:Name="InnerImage"
+                            Opacity="{TemplateBinding Opacity}"
+                            Visibility="{TemplateBinding Visibility}"
+                            Stretch="{TemplateBinding Stretch}"
+                            MinHeight="{TemplateBinding MinHeight}"
+                            MinWidth="{TemplateBinding MinWidth}"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                            StretchDirection="{TemplateBinding StretchDirection}"
+                            Width="{TemplateBinding Width}" 
+                            Height="{TemplateBinding Height }">
+                            <Image.Source>
+                                <MultiBinding Converter="{StaticResource ImageModuleLocationConverter}">
+                                    <Binding Path="RootLocation" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=mdtwc:ImageModule}" Mode="TwoWay" ></Binding>
+                                    <Binding Path="ModuleSource" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=mdtwc:ImageModule}" Mode="TwoWay" ></Binding>
+                                </MultiBinding>
+                            </Image.Source>
+                        </Image>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

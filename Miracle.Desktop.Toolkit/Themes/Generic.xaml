@@ -1,0 +1,18 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:shell="http://schemas.microsoft.com/winfx/2006/xaml/presentation/shell">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Miracle.Desktop.Toolkit;component/Themes/Navbar.xaml" />
+        <ResourceDictionary Source="/Miracle.Desktop.Toolkit;component/Themes/HintText.xaml" />
+        <ResourceDictionary Source="/Miracle.Desktop.Toolkit;component/Themes/ImageText.xaml" />
+        <ResourceDictionary Source="/Miracle.Desktop.Toolkit;component/Themes/ImageModule.xaml" />
+        <ResourceDictionary Source="/Miracle.Desktop.Toolkit;component/Themes/PathButton.xaml" />
+        <ResourceDictionary Source="/Miracle.Desktop.Toolkit;component/Themes/EllipseButton.xaml" />
+        <ResourceDictionary Source="/Miracle.Desktop.Toolkit;component/Themes/CornerButton.xaml" />
+        <ResourceDictionary Source="/Miracle.Desktop.Toolkit;component/Themes/ViewPageBox.xaml" />
+        <ResourceDictionary Source="/Miracle.Desktop.Toolkit;component/Themes/DropDown.xaml" />
+        <ResourceDictionary Source="/Miracle.Desktop.Toolkit;component/Themes/Icon.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

@@ -1,0 +1,90 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:mdtw="clr-namespace:Miracle.Desktop.Toolkit.Windows"
+                    xmlns:mdtwc="clr-namespace:Miracle.Desktop.Toolkit.Windows.Controls"
+                    xmlns:converters="clr-namespace:Miracle.Desktop.Toolkit.Windows.Converters"
+                   >
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Miracle.Desktop.Toolkit;component/Assets/Desktoper.Common.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    
+
+    <DataTemplate x:Key="DefaultWatermarkTemplate">
+        <ContentControl Content="{Binding}" Foreground="Gray" Focusable="False" />
+    </DataTemplate>
+
+    <Style TargetType="mdtwc:ImageText">
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+        <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource TextBoxBorderBrush}" />
+        <Setter Property="FontFamily" Value="{StaticResource DFontFamily}" />
+        <Setter Property="BorderThickness" Value="0.8" />
+        <Setter Property="Padding" Value="3" />
+        <Setter Property="AllowDrop" Value="false" />
+        <Setter Property="Width" Value="312" />
+        <Setter Property="Height" Value="56" />
+        <Setter Property="IWidth" Value="32" />
+        <Setter Property="IHeight" Value="28" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst" />
+        <Setter Property="Stylus.IsFlicksEnabled" Value="False" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Validation.ErrorTemplate" Value="{DynamicResource ValidationErrorTemplate}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate  TargetType="mdtwc:ImageText">
+                    <Border 
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        CornerRadius="1"
+                        MinHeight="{TemplateBinding MinHeight}"
+                        MinWidth="{TemplateBinding MinWidth}"
+                        Background="{TemplateBinding Background}">
+
+                        <Grid Margin="{TemplateBinding Padding}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Path 
+                                Grid.Column="0"
+                                Height="{TemplateBinding IHeight}" 
+                                Width="{TemplateBinding IWidth}" 
+                                Fill="{TemplateBinding Foreground}" 
+                                Data="{TemplateBinding Data}" 
+                                Margin="0" 
+                                Stretch="Fill" />
+
+                            <mdtwc:HintText 
+                                x:Name="PART_InputText"
+                                Margin="0"
+                                Hint="{TemplateBinding Hint}"
+                                Text="{TemplateBinding Text}"
+                                Grid.Column="1"
+                                BorderBrush="{x:Null}"
+                                BorderThickness="0"
+                                Background="Transparent"
+                                IsReadOnly="{TemplateBinding IsReadOnly}"
+                                FontSize="{TemplateBinding FontSize}"
+                                FontFamily="{TemplateBinding FontFamily}"
+                                FontStyle="{TemplateBinding FontStyle}"
+                                FontStretch="{TemplateBinding FontStretch}"
+                                FontWeight="{TemplateBinding FontWeight}"
+                                Foreground="{TemplateBinding Foreground}"
+                                IsEnabled="{TemplateBinding IsEnabled}"
+                                VerticalContentAlignment="Center" />
+
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Foreground" Value="{DynamicResource ButtonTextDisabled }" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

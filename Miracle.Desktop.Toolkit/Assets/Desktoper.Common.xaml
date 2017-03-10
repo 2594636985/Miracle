@@ -1,0 +1,23 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:converters="clr-namespace:Miracle.Desktop.Toolkit.Windows.Converters"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <FontFamily x:Key="DFontFamily">pack://application:,,,/Miracle.Desktop.Toolkit;component/Resources/#HYQiHei</FontFamily>
+
+    <converters:BooleanToFontWeightConverter x:Key="BooleanToFontWeightConverter" />
+    <converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+    <converters:NullToVisibilityConverter x:Key="NullToVisibilityConverter" />
+    <converters:NullOrEmptyStringToVisibilityConverter x:Key="NullOrEmptyStringToVisibilityConverter" />
+    <converters:ToUpperConverter x:Key="ToUpperConverter" />
+    <converters:ToLowerConverter x:Key="ToLowerConverter" />
+    <BooleanToVisibilityConverter x:Key="WindowBooleanToVisibilityConverter"/>
+    <converters:ThicknessToDoubleConverter x:Key="ThicknessToDoubleConverter"/>
+
+
+    <sys:Double x:Key="XXLFontSize">30</sys:Double>
+    <sys:Double x:Key="XLFontSize">18</sys:Double>
+    <sys:Double x:Key="MFontSize">16</sys:Double>
+    <sys:Double x:Key="SFontSize">14</sys:Double>
+
+</ResourceDictionary>

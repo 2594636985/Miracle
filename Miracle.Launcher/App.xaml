@@ -1,0 +1,14 @@
+﻿<Application x:Class="Miracle.Launcher.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Startup="Application_Startup"
+             Exit="Application_Exit">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Miracle.Desktop.Toolkit;component/Assets/Desktoper.xaml" />
+                <ResourceDictionary Source="/Miracle.Desktop.Toolkit;component/Assets/Desktoper.Dark.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

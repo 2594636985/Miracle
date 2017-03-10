@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Miracle>
+  <AddInName>AddIns</AddInName>
+  <StartModuleName>MainModule</StartModuleName>
+  <Themes></Themes>
+  <FullScreen>false</FullScreen>
+  <HttpServerUrl>http://localhost:8686/</HttpServerUrl>
+  <ConnectionString>Data Source=.;Initial Catalog=Miracle;Persist Security Info=True;User ID=sa;Password=123</ConnectionString>
+  <Version>1.0.0.0</Version>
+</Miracle>

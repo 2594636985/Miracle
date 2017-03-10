@@ -1,0 +1,14 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:mdtw="clr-namespace:Miracle.Desktop.Toolkit.Windows"
+                    xmlns:mdtwc="clr-namespace:Miracle.Desktop.Toolkit.Windows.Controls"
+                    xmlns:converters="clr-namespace:Miracle.Desktop.Toolkit.Windows.Converters"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Miracle.Desktop.Toolkit;component/Assets/Desktoper.Common.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+
+
+</ResourceDictionary>
