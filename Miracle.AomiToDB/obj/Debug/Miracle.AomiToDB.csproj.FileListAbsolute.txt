@@ -1,0 +1,12 @@
+D:\Developer\Net\workplace\Miracle\Miracle.AomiToDB\bin\Debug\SqlQuery\ReservedWords.txt
+D:\Developer\Net\workplace\Miracle\Miracle.AomiToDB\bin\Debug\Miracle.AomiToDB.dll
+D:\Developer\Net\workplace\Miracle\Miracle.AomiToDB\bin\Debug\Miracle.AomiToDB.pdb
+D:\Developer\Net\workplace\Miracle\Miracle.AomiToDB\obj\Debug\Miracle.AomiToDB.dll
+D:\Developer\Net\workplace\Miracle\Miracle.AomiToDB\obj\Debug\Miracle.AomiToDB.pdb
+D:\Developer\Net\workplace\Miracle\Miracle.AomiToDB\obj\Debug\Miracle.AomiToDB.csprojResolveAssemblyReference.cache
+D:\Job\Dev\workplace\Miracle\Miracle.AomiToDB\bin\Debug\SqlQuery\ReservedWords.txt
+D:\Job\Dev\workplace\Miracle\Miracle.AomiToDB\bin\Debug\Miracle.AomiToDB.dll
+D:\Job\Dev\workplace\Miracle\Miracle.AomiToDB\bin\Debug\Miracle.AomiToDB.pdb
+D:\Job\Dev\workplace\Miracle\Miracle.AomiToDB\obj\Debug\Miracle.AomiToDB.dll
+D:\Job\Dev\workplace\Miracle\Miracle.AomiToDB\obj\Debug\Miracle.AomiToDB.pdb
+D:\Job\Dev\workplace\Miracle\Miracle.AomiToDB\obj\Debug\Miracle.AomiToDB.csprojResolveAssemblyReference.cache
