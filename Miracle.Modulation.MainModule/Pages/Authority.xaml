@@ -1,0 +1,289 @@
+﻿<UserControl x:Class="Miracle.Modulation.MainModule.Pages.Authority"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mdt ="http://schemas.miracle.themes.com/wpf/xaml/toolkit"
+             xmlns:vm ="clr-namespace:Miracle.Modulation.MainModule.ViewModel"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:local="clr-namespace:Miracle.Modulation.MainModule"
+             mc:Ignorable="d"
+             Initialized="Authority_Initialized"
+             Loaded="Authority_Loaded"
+             Unloaded="Authority_Unloaded"
+             >
+
+
+    <UserControl.Resources>
+
+        <sys:Double x:Key="ADFontSize">16</sys:Double>
+        <Thickness x:Key="ButtonMargin">6,6,0,0</Thickness>
+        <SolidColorBrush x:Key="BorderColorBrush" Color="#19A274" />
+
+        <!--营业时间部分-->
+        <Style x:Key="TextBlockOpenTimeStyle" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="{StaticResource DFontFamily}" />
+            <Setter Property="Foreground" Value="{StaticResource WhiteColorBrush}" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="Padding" Value="0"/>
+        </Style>
+        
+        <!--登录的输入文本框-->
+        <Style x:Key="TextInputStyle" TargetType="mdt:HintText">
+            <Setter Property="Padding" Value="20,0,0,0" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="FontFamily" Value="{StaticResource DFontFamily}"></Setter>
+            <Setter Property="FontSize" Value="{StaticResource ADFontSize}" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+
+        </Style>
+        
+        <!--登录的输入框-->
+        <Style x:Key="TextBorderStyle" TargetType="Border">
+            <Setter Property="Width" Value="300" />
+            <Setter Property="Height" Value="40" />
+            <Setter Property="BorderBrush" Value="{StaticResource BorderColorBrush}" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="CornerRadius" Value="6" />
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="Margin" Value="0,2,0,10" />
+        </Style>
+        
+        <!--登录输入框的图片部分的样式-->
+        <Style x:Key="TextIconBorderStyle" TargetType="Border">
+            <Setter Property="Width" Value="55" />
+            <Setter Property="Height" Value="19" />
+            <Setter Property="BorderBrush" Value="{StaticResource BorderColorBrush}" />
+            <Setter Property="BorderThickness" Value="0,0,1,0" />
+            <Setter Property="CornerRadius" Value="6,0,0,6" />
+            <Setter Property="Padding" Value="0"/>
+        </Style>
+        
+        <!--用户名和密码的图样式-->
+        <Style x:Key="TextIconPathBorderStyle" TargetType="mdt:Icon">
+            <Setter Property="Width" Value="17" />
+            <Setter Property="Height" Value="19" />
+            <Setter Property="Margin" Value="16,0,16,0" />
+            <Setter Property="Foreground" Value="#19A274" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+        </Style>
+        
+        <!--登录键盘的数字按扭-->
+        <Style x:Key="DigitalButton" BasedOn="{StaticResource MiracleButton}" TargetType="{x:Type Button}">
+            <Setter Property="BorderBrush" Value="LightGray"></Setter>
+            <Setter Property="Padding" Value="0" />
+            <Setter  Property="Width" Value="60" />
+            <Setter  Property="Height" Value="60" />
+            <Setter Property="Margin" Value="6" />
+            <Setter Property="Foreground" Value="#505050" />
+            <Setter Property="FontSize" Value="26"></Setter>
+        </Style>
+        
+        <!--登录键盘的删除按扭-->
+        <Style x:Key="DeleteButton" BasedOn="{StaticResource DigitalButton}" TargetType="{x:Type Button}">
+            <Setter Property="FontSize" Value="{StaticResource ADFontSize}" />
+        </Style>
+        
+        <!--登录键盘的清除按扭-->
+        <Style x:Key="ClearButton" BasedOn="{StaticResource DigitalButton}" TargetType="{x:Type Button}">
+            <Setter Property="FontSize" Value="{StaticResource ADFontSize}" />
+        </Style>
+        
+        <!--登录键盘的录登按扭-->
+        <Style x:Key="EnterButton" BasedOn="{StaticResource DigitalButton}" TargetType="{x:Type Button}">
+            <Setter  Property="Width" Value="84" />
+            <Setter Property="Height"  Value="204"/>
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="FontSize" Value="{StaticResource ADFontSize}" />
+        </Style>
+
+        <!--登录键盘的录登按扭的内容样式-->
+        <Style x:Key="EnterButtonContentStyle" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="{StaticResource DFontFamily}" />
+            <Setter Property="Foreground" Value="#505050" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="Padding" Value="0"/>
+        </Style>
+
+        <!--登录键盘的退出按扭-->
+        <Style x:Key="ExitButton"  BasedOn="{StaticResource DigitalButton}" TargetType="{x:Type Button}">
+            <Setter  Property="Width" Value="84" />
+            <Setter  Property="Height" Value="60" />
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="FontSize" Value="{StaticResource ADFontSize}" />
+        </Style>
+      
+
+    </UserControl.Resources>
+
+    <UserControl.DataContext>
+        <vm:AuthorityViewModel />
+    </UserControl.DataContext>
+
+
+    <Grid Background="#5cc0af">
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition  Height="auto"/>
+                <RowDefinition  Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Height="70">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Column="0" Margin="52,0,0,0" Text="营业时间：" Style="{StaticResource TextBlockOpenTimeStyle}" VerticalAlignment="Center" ></TextBlock>
+                <TextBlock x:Name="_tbOpenTime" Grid.Column="1"  Style="{StaticResource TextBlockOpenTimeStyle}" VerticalAlignment="Center" ></TextBlock>
+                <mdt:Icon  Grid.Column="2"  Width="32" Height="30" Margin="15,0,0,0" IconMark="Server"  Foreground="{StaticResource WhiteColorBrush}"   />
+            </Grid>
+
+            <!--*************************************************主要内容部分******************************************************-->
+            <Grid Grid.Row="1">
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition  Height="auto"/>
+                        <RowDefinition  Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <mdt:ImageModule Grid.Row="0" HorizontalAlignment="Center"  Margin="0,0,0,30"  Width="350" Height="98" RootLocation="{x:Static local:ConstantStatic.RootLocation}" ModuleSource="Resources/AppLogo.png" />
+
+                    <Grid Grid.Row="1" HorizontalAlignment="Center">
+
+                        <Border Padding="10"  Opacity="0.3"   CornerRadius="20" Background="#19A274" Width="370" Height="468" >
+                            <Border.Effect>
+                                <DropShadowEffect BlurRadius="8" ShadowDepth="1.5" Direction="270" Color="#AA000000" Opacity=".5" RenderingBias="Performance" />
+                            </Border.Effect>
+                        </Border>
+
+                        <Path Width="342" Height="444" Fill="White" Stretch="Fill" >
+                            <Path.Data>
+                                M2.5,8c1.8-4.2,6.4-7.1,11-7c20,0,40,0,60,0c15.7,0.8,31.5,2,46.8,6.3c13.2,3.5,25.7,9.5,39.3,11.8   c15.9,2.6,32.4,2.1,48.1-1.3C221.3,14.6,234,8.4,247.5,5c8.5-2.2,17.2-3.3,25.9-4c19,0,38.1,0,57.1,0c6.4-0.2,12.2,5.6,12,12   c0,142.6,0,285.1,0,427.7c-1.2,1.5-2.7,2.7-4.5,3.3H6c-1.8-0.6-3.4-1.7-4.6-3.2c0-140.9,0-281.8,0-422.8C1.6,14.7,0.9,11.1,2.5,8z
+                            </Path.Data>
+                        </Path>
+                       
+
+                        <Grid Margin="0,54,0,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition  Height="auto"/>
+                                <RowDefinition  Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <!--*****************登录框的输入部分 *************************************-->
+                            <Grid Grid.Row="0" x:Name="_gridLoginInformation" HorizontalAlignment="Center" >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition  Height="auto"/>
+                                    <RowDefinition  Height="auto"/>
+                                </Grid.RowDefinitions>
+                                <Border Grid.Row="0" Style="{StaticResource TextBorderStyle}">
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
+                                        <Border Style="{StaticResource TextIconBorderStyle}" >
+                                            <mdt:Icon IconMark="User" Style="{StaticResource TextIconPathBorderStyle}"/>
+                                        </Border>
+
+                                        <mdt:HintText 
+                                            Style="{StaticResource TextInputStyle}"
+                                            Hint="请输入工号" 
+                                         >
+                                            <mdt:HintText.Text>
+                                                <Binding Path="Username" UpdateSourceTrigger="Explicit" ValidatesOnDataErrors="True" NotifyOnValidationError="True" Mode="TwoWay">
+                                                    <Binding.ValidationRules >
+                                                        <mdt:RequiredValidator  LabelText="工号" />
+                                                    </Binding.ValidationRules>
+                                                </Binding>
+                                            </mdt:HintText.Text>
+                                        </mdt:HintText>
+                                    </StackPanel>
+                                </Border>
+                                <Border Grid.Row="1" Style="{StaticResource TextBorderStyle}" >
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
+                                        <Border  Style="{StaticResource TextIconBorderStyle}" >
+                                            <mdt:Icon IconMark="Password" Style="{StaticResource TextIconPathBorderStyle}"/>
+                                        </Border>
+                                        <mdt:HintText 
+                                            Style="{StaticResource TextInputStyle}"
+                                            Hint="请输入密码"   
+                                        >
+                                            <mdt:HintText.Text>
+                                                <Binding Path="Password" UpdateSourceTrigger="Explicit" ValidatesOnDataErrors="True" NotifyOnValidationError="True" >
+                                                    <Binding.ValidationRules>
+                                                        <mdt:RequiredValidator LabelText="密码"  />
+                                                    </Binding.ValidationRules>
+                                                </Binding>
+                                            </mdt:HintText.Text>
+                                        </mdt:HintText>
+                                    </StackPanel>
+                                </Border>
+                            </Grid>
+
+                            <!--*****************登录框的按扭部分 ***************************************-->
+                            <Grid Grid.Row="1" HorizontalAlignment="Center">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition  Height="auto"/>
+                                    <RowDefinition  Height="auto"/>
+                                    <RowDefinition  Height="auto"/>
+                                    <RowDefinition  Height="auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto" />
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <!--第一行-->
+                                <Button Grid.Row="0" Grid.Column="0" Style="{StaticResource DigitalButton}" Content="1"  />
+                                <Button Grid.Row="0" Grid.Column="1" Style="{StaticResource DigitalButton}" Content="2" />
+                                <Button Grid.Row="0" Grid.Column="2" Style="{StaticResource DigitalButton}" Content="3" />
+                                <Button Grid.Row="0" Grid.RowSpan="3" Grid.Column="3" Style="{StaticResource EnterButton}"  Click="BtnLogin_Click" >
+                                    <Button.Content>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="auto" />
+                                                <RowDefinition Height="auto" />
+                                            </Grid.RowDefinitions>
+                                            <TextBlock Grid.Row="0"  Text="登陆" Style="{StaticResource EnterButtonContentStyle}" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                            <TextBlock Grid.Row="1" Text="(Enter)" Style="{StaticResource EnterButtonContentStyle}"  VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                        </Grid>
+                                    </Button.Content>
+                                </Button>
+
+                                <!--第二行-->
+                                <Button Grid.Row="1" Grid.Column="0" Style="{StaticResource DigitalButton}" Content="4" />
+                                <Button Grid.Row="1" Grid.Column="1" Style="{StaticResource DigitalButton}" Content="5" />
+                                <Button Grid.Row="1"  Grid.Column="2" Style="{StaticResource DigitalButton}" Content="6" />
+
+                                <!--第三行-->
+                                <Button Grid.Row="2" Grid.Column="0" Style="{StaticResource DigitalButton}" Content="7" />
+                                <Button Grid.Row="2" Grid.Column="1" Style="{StaticResource DigitalButton}" Content="8" />
+                                <Button Grid.Row="2" Grid.Column="2" Style="{StaticResource DigitalButton}" Content="9"  />
+
+                                <!--第四行-->
+                                <Button Grid.Row="3" Grid.Column="0" Style="{StaticResource DigitalButton}" Content="0" />
+                                <Button Grid.Row="3" Grid.Column="1" Style="{StaticResource DeleteButton}" Content="删除" />
+                                <Button Grid.Row="3" Grid.Column="2" Style="{StaticResource ClearButton}" Content="清空" />
+                                <Button Grid.Row="3" Grid.Column="3" Style="{StaticResource ExitButton}"  Click="BtnExit_Click" >
+                                    <Button.Content>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="auto" />
+                                                <RowDefinition Height="auto" />
+                                            </Grid.RowDefinitions>
+                                            <TextBlock Grid.Row="0"  Text="退出" Style="{StaticResource EnterButtonContentStyle}" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                            <TextBlock Grid.Row="1" Text="(Esc)" Style="{StaticResource EnterButtonContentStyle}"  VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                        </Grid>
+                                    </Button.Content>
+                                </Button>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>
