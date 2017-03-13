@@ -1,0 +1,10 @@
+D:\Job\Dev\workplace\Miracle\Miracle.Modularization\obj\Debug\Miracle.Modularization.csprojResolveAssemblyReference.cache
+D:\Job\Dev\workplace\Miracle\Miracle.Modularization\bin\Debug\SqlQuery\ReservedWords.txt
+D:\Job\Dev\workplace\Miracle\Miracle.Modularization\bin\Debug\Miracle.Modularization.dll
+D:\Job\Dev\workplace\Miracle\Miracle.Modularization\bin\Debug\Miracle.Modularization.pdb
+D:\Job\Dev\workplace\Miracle\Miracle.Modularization\bin\Debug\Miracle.AomiToDB.dll
+D:\Job\Dev\workplace\Miracle\Miracle.Modularization\bin\Debug\Miracle.dll
+D:\Job\Dev\workplace\Miracle\Miracle.Modularization\bin\Debug\Miracle.AomiToDB.pdb
+D:\Job\Dev\workplace\Miracle\Miracle.Modularization\bin\Debug\Miracle.pdb
+D:\Job\Dev\workplace\Miracle\Miracle.Modularization\obj\Debug\Miracle.Modularization.dll
+D:\Job\Dev\workplace\Miracle\Miracle.Modularization\obj\Debug\Miracle.Modularization.pdb
