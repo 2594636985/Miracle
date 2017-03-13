@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Module>
+  <ModuleName>OrdersModule</ModuleName>
+  <AppName>点菜收银</AppName>
+  <Version>1.0.0.0</Version>
+  <MainAssemblyName>Miracle.Modulation.Orders</MainAssemblyName>
+  <ModuleMenus>
+    <ModuleMenu AppName="测试">OrdersIndex.xaml</ModuleMenu>
+    <ModuleMenu AppName="测试1">OrdersIndex.xaml</ModuleMenu>
+  </ModuleMenus>
+</Module>

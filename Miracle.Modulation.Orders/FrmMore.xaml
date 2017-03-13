@@ -1,0 +1,10 @@
+﻿<Window x:Class="Miracle.Modulation.Orders.FrmMore"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:xxx ="clr-namespace:Miracle.Modulation.Orders"
+        Title="FrmMore" Height="300" Width="300">
+    <Grid>
+        <Grid xxx:GridHelper.ShowBorder="true" HorizontalAlignment="Left" Height="100" Margin="61,58,0,0" VerticalAlignment="Top" Width="100"/>
+
+    </Grid>
+</Window>

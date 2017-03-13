@@ -1,0 +1,77 @@
+﻿<mdt:ViewPage x:Class="Miracle.Modulation.Orders.Pages.OrdersIndex"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mdt ="http://schemas.miracle.themes.com/wpf/xaml/toolkit"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:ext="clr-namespace:Miracle.Modulation.Orders"
+             Loaded="ViewModule_Loaded"
+             mc:Ignorable="d" 
+             d:DesignHeight="710" d:DesignWidth="1024" BorderThickness="1">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="424px" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid Height="710" Width="422" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="326*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Height="710" Width="338"  VerticalAlignment="Top" HorizontalAlignment="Left">
+                <Label Content="单号：A00562"  HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="338" FontFamily="Arial" FontSize="20" FontWeight="Bold" Height="42" VerticalContentAlignment="Center" Padding="0"/>
+                <StackPanel Height="392" Margin="0,47,0,271" VerticalAlignment="Center" Width="338">
+                    <TextBlock Text="订单详情界面" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Height="391" Width="326" Background="#FFC59898" Margin="6,0"/>
+                </StackPanel>
+                <Button Height="46" Width="164" Content="上一页"  Margin="5,440,169,224"  FontSize="20" Padding="0" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Button Height="46" Width="164" Content="下一页" Margin="0,440,5,224"  FontSize="20" Padding="0" HorizontalAlignment="Right" VerticalAlignment="Center"  />
+
+
+
+
+                <Label Width="162" Height="66" Content="数量:4" HorizontalAlignment="Left" Margin="6,488,0,0" VerticalAlignment="Top" FontSize="30" FontWeight="Bold" FontFamily="Arial" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch"/>
+                <Label Width="162" Height="66" Content="应收:40.00" HorizontalAlignment="Right" Margin="0,488,6,0" VerticalAlignment="Top" FontSize="30" FontWeight="Bold" FontFamily="Arial" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch"/>
+                <Button Width="170" Height="145" Content="结账" HorizontalAlignment="Left" Margin="6,556,0,0" VerticalAlignment="Top" FontSize="30" FontWeight="Bold" FontFamily="Arial" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                <Button Height="46" Width="156" Content="清空列表" HorizontalAlignment="Right" Margin="0,556,3,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.5,5.739" />
+                <Button Height="46" Width="156" Content="挂单" HorizontalAlignment="Right" Margin="0,605,3,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.5,5.739" />
+                <Button Height="46" Width="156" Content="取单(1)" HorizontalAlignment="Right" Margin="0,655,3,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.5,5.739" />
+            </Grid>
+            <Grid HorizontalAlignment="Right" Height="710"  VerticalAlignment="Top" Width="84" ext:GridHelper.ShowBorder="true">
+
+                <StackPanel Height="710" VerticalAlignment="Top" Width="84" HorizontalAlignment="Left">
+                    <Button Content="数量" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontSize="30" Width="84" Height="59" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderThickness="0,0,0,0" Padding="0"/>
+                    <Button Content="+" FontWeight="Bold" FontSize="30" Width="84" Height="70" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0" BorderThickness="0" Padding="0,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                    <Button Content="-" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontSize="30" Width="84" Height="70" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0" BorderThickness="0" Padding="0,0,0,0"/>
+                    <Button Content="做法" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontSize="30" Width="84" Height="70" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0" BorderThickness="0" Padding="0,0,0,0"/>
+                    <Button Content="赠菜" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontSize="30" Width="84" Height="70" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0" BorderThickness="0" Padding="0,0,0,0"/>
+                    <Button Name="btnMore" Click="btnMore_Click" Content="更多" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontSize="30" Width="84" Height="70" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0" BorderThickness="0" Padding="0,0,0,0"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="1" Height="545" VerticalAlignment="Top" Width="600" Margin="0">
+            <StackPanel HorizontalAlignment="Left" Height="485" Margin="0,10,0,0" VerticalAlignment="Top" Width="600">
+                <Button Content="西瓜汁&#xA;  ¥10" HorizontalAlignment="Left" VerticalAlignment="Top" Width="148" Height="80" FontFamily="Arial" FontSize="20"/>
+            </StackPanel>
+            <Button Content="上一页" HorizontalAlignment="Left" Margin="0,495,0,0" VerticalAlignment="Bottom" Width="300" Height="50" FontSize="20" FontFamily="Arial" Padding="0"/>
+            <Button Content="下一页" HorizontalAlignment="Right" Margin="299,495,0,0" VerticalAlignment="Bottom" Width="300" Height="50" FontSize="20" Padding="0"/>
+
+        </Grid>
+        <Grid Grid.Column="1" Height="162" VerticalAlignment="Bottom" Width="600" Margin="0,0,0,0">
+            <StackPanel  Orientation="Horizontal" HorizontalAlignment="Right" Height="108" Margin="0,54,0,0" Width="600">
+                <Button Content="主食" HorizontalAlignment="Left" VerticalAlignment="Top" Width="148" Height="50" FontWeight="Bold" FontFamily="Arial" FontSize="20" BorderThickness="1" Padding="1" Margin="2.5,0,0,0"/>
+                <Button Content="主食" HorizontalAlignment="Left" Margin="1,0,0,0" VerticalAlignment="Top" Width="148" Height="50" FontWeight="Bold" FontFamily="Arial" FontSize="20" BorderThickness="1"/>
+                <Button Content="主食" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Width="148" Height="50" FontWeight="Bold" FontFamily="Arial" FontSize="20" BorderThickness="1" Padding="1"/>
+                <Button Content="主食" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Width="148" Height="50" FontWeight="Bold" FontFamily="Arial" FontSize="20" BorderThickness="1"/>
+                <Button Content="主食" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Width="148" Height="50" FontWeight="Bold" FontFamily="Arial" FontSize="20" BorderThickness="1"/>
+
+            </StackPanel>
+            <!--
+
+            <Button Content="主食" HorizontalAlignment="Left" Margin="149,167,0,0" VerticalAlignment="Top" Width="148" Height="50" FontWeight="Bold" FontFamily="Arial" FontSize="20" BorderThickness="1"/>
+            <Button Content="主食" HorizontalAlignment="Left" Margin="297,167,0,0" VerticalAlignment="Top" Width="148" Height="50" FontWeight="Bold" FontFamily="Arial" FontSize="20" BorderThickness="1"/>
+            <Button Content="◀" HorizontalAlignment="Left" Margin="446,167,0,0" VerticalAlignment="Top" Width="74" Height="50" BorderThickness="1" FontFamily="Arial" FontSize="20"/>
+            <Button Content="▶" HorizontalAlignment="Left" Margin="521,167,0,0" VerticalAlignment="Top" Width="74" Height="50" BorderThickness="1" FontFamily="Arial" FontSize="20"/>-->
+        </Grid>
+    </Grid>
+</mdt:ViewPage>

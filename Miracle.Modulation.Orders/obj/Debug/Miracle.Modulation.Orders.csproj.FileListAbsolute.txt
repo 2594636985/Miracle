@@ -1,0 +1,17 @@
+D:\Job\Dev\workplace\Miracle\Bin\AddIns\Orders\SqlQuery\ReservedWords.txt
+D:\Job\Dev\workplace\Miracle\Bin\AddIns\Orders\Module.xml
+D:\Job\Dev\workplace\Miracle\Bin\AddIns\Orders\Miracle.Modulation.Orders.dll
+D:\Job\Dev\workplace\Miracle\Bin\AddIns\Orders\Miracle.Modulation.Orders.pdb
+D:\Job\Dev\workplace\Miracle\Miracle.Modulation.Orders\obj\Debug\Miracle.Modulation.Orders.csprojResolveAssemblyReference.cache
+D:\Job\Dev\workplace\Miracle\Miracle.Modulation.Orders\obj\Debug\FrmMore.g.cs
+D:\Job\Dev\workplace\Miracle\Miracle.Modulation.Orders\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Job\Dev\workplace\Miracle\Miracle.Modulation.Orders\obj\Debug\Miracle.Modulation.Orders_MarkupCompile.cache
+D:\Job\Dev\workplace\Miracle\Miracle.Modulation.Orders\obj\Debug\Miracle.Modulation.Orders_MarkupCompile.lref
+D:\Job\Dev\workplace\Miracle\Miracle.Modulation.Orders\obj\Debug\FrmMore.baml
+D:\Job\Dev\workplace\Miracle\Miracle.Modulation.Orders\obj\Debug\Miracle.Modulation.Orders.g.resources
+D:\Job\Dev\workplace\Miracle\Miracle.Modulation.Orders\obj\Debug\Miracle.Modulation.Orders.Properties.Resources.resources
+D:\Job\Dev\workplace\Miracle\Miracle.Modulation.Orders\obj\Debug\Miracle.Modulation.Orders.csproj.GenerateResource.Cache
+D:\Job\Dev\workplace\Miracle\Miracle.Modulation.Orders\obj\Debug\Miracle.Modulation.Orders.dll
+D:\Job\Dev\workplace\Miracle\Miracle.Modulation.Orders\obj\Debug\Miracle.Modulation.Orders.pdb
+D:\Job\Dev\workplace\Miracle\Miracle.Modulation.Orders\obj\Debug\Pages\OrdersIndex.g.cs
+D:\Job\Dev\workplace\Miracle\Miracle.Modulation.Orders\obj\Debug\Pages\OrdersIndex.baml
